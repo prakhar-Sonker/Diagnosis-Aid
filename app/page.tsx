@@ -1,6 +1,10 @@
+import Career from "@/components/Careers";
+import Features from "@/components/Features";
+import Footer from "@/components/Footer";
 import FullPageImg from "@/components/FullPageImg";
 import Hero from "@/components/Hero";
 import HospitalTrustImg from "@/components/HospitalTrustImg";
+import HowItWorks from "@/components/HowItWorks";
 import IntroducingData from "@/components/IntroducingData";
 import LostResourcesPage from "@/components/LostResourcesPage";
 import MagnitudePage from "@/components/MagnitudePage";
@@ -30,6 +34,10 @@ export default function Home() {
       <Safe />
       <FullPageImg />
       <Research />
+      <Features />
+      <HowItWorks />
+      <Career />
+      <Footer />
     </>
   );
 }

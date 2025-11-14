@@ -38,11 +38,13 @@ function Nav() {
           )
         )}
       </ul>
-
-      {/* Button */}
-      <button className="bg-white text-black w-[136px] h-[40px] rounded-[5px] font-semibold shadow-md hover:opacity-90 transition flex items-center justify-center">
+<Link
+        href="/get-started"
+        className="bg-white text-black w-[136px] h-[40px] rounded-[5px] font-semibold shadow-md 
+          hover:opacity-90 transition flex items-center justify-center"
+      >
         Get Started
-      </button>
+      </Link>
     </nav>
   );
 }
