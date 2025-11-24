@@ -69,7 +69,7 @@ export default function OtpVerification() {
         ))}
       </div>
 <div className="w-[320px] mx-auto mt-15">
-  <UniversalButton text="Verify OTP" href="#" fullWidth />
+  <UniversalButton text="Verify OTP" href="/get-started/reset" fullWidth />
 </div>
 
 
