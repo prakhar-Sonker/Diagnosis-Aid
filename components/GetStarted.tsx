@@ -61,7 +61,7 @@ const GetStarted = () => {
         {/* BUTTONS */}
         <div className="flex justify-center gap-5 mb-24">
           <PrimaryButton text="Login" href="/get-started/login" />
-          <PrimaryButton text="Sign Up" href="/SignUp" />
+          <PrimaryButton text="SignUp" href="/get-started/signup" />
         </div>
 
         {/* FOOTER INSIDE RIGHT SIDE */}

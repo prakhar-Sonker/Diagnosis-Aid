@@ -23,17 +23,17 @@ export default function UniversalButton({
       onClick={() => router.push(href)}
       className={`
         font-fig
-        bg-white 
-        text-black 
-        rounded-md 
-        font-semibold 
-        text-[16px]
+        bg-[#FFFFFF]
+        text-[#161618]
+        rounded-lg
+        font-bold
+        text-[20px]
         h-[54px]
         transition
         duration-300
         hover:opacity-80
         flex items-center justify-center gap-3
-        ${fullWidth ? "w-full" : "w-[176px]"}
+        ${fullWidth ? "w-full" : "w-44"}
       `}
     >
       {icon && (

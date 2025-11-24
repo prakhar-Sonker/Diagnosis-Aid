@@ -50,12 +50,14 @@ export default function Login() {
         </div>
 
         {/* Forgot Password */}
-        <p
-          className="text-[14px] underline cursor-pointer mt-[-6px] mb-3"
-          style={{ fontFamily: "Figtree" }}
-        >
-          Forgot Password?
-        </p>
+       <a 
+  href="/get-started/forgot-password" 
+  className="text-[14px] underline cursor-pointer"
+  style={{ fontFamily: "Figtree" }}
+>
+  Forgot Password?
+</a>
+
 
         {/* Login Button */}
         <UniversalButton text="Login" href="/dashboard" fullWidth />
