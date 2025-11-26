@@ -60,7 +60,7 @@ export default function Login() {
 
 
         {/* Login Button */}
-        <UniversalButton text="Login" href="/dashboard" fullWidth />
+        <UniversalButton text="Login" href="/get-started/appointment" fullWidth />
 
 
         {/* OR Divider */}

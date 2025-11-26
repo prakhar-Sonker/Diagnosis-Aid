@@ -3,7 +3,8 @@ import Image from "next/image";
 
 function HospitalTrustImg() {
   return (
-    <div className=" w-full bg-[#434344] shadow-[grey] text-white py-10 px-6 text-center relative">
+    <div className=" w-full bg-[#2B2B2E] shadow-[0px_-30px_60px_0px_#000000]
+ text-[#FFFFFF] py-10 px-6 text-center relative">
       {/* ===== Title ===== */}
       <h3
         className="text-[20px] font-medium text-white uppercase leading-[100%] tracking-[0%] mb-8"
@@ -13,7 +14,7 @@ function HospitalTrustImg() {
       </h3>
 
       {/* ===== Logos Section ===== */}
-      <div className="flex flex-wrap items-center justify-center gap-53px">
+      <div className="flex flex-wrap items-center justify-between gap-53px">
         <div className="w-24 h-16 flex items-center justify-center">
           <Image
             src="/frame9.png"

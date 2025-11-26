@@ -1,38 +1,33 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const LostResourcesPage: React.FC = () => {
   return (
-    <section className="w-full bg-[#161618] text-white py-20 px-10 md:px-24">
-      {/* === Top Divider Line === */}
-      <div className="border-t-2 border-white w-full mb-16"></div>
+    <section className="w-full text-[#FFFFFF] py-20 px-10 md:px-24">
+      
+      {/* === Divider Line === */}
+      <div className="border-t-2 border-[#FFFFFF] w-full mb-16"></div>
 
       {/* === Main Section === */}
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-12">
+        
         {/* === LEFT SIDE TEXT === */}
-        <div className="flex-1 space-y-6">
+        <div className="flex-1 space-y-6 font-[Figtree]">
+
           {/* Title */}
-          <h2
-            className="text-[40px] font-bold leading-[100%]"
-            style={{ fontFamily: "Figtree, sans-serif", color: "#FFFFFF" }}
-          >
+          <h2 className="text-[40px] font-bold leading-[100%] text-[#FFFFFF]">
             Lost Time & Resources
           </h2>
 
           {/* Subtext (Italic) */}
-          <p
-            className="italic text-[18px] text-gray-300 leading-[150%]"
-            style={{ fontFamily: "Figtree, sans-serif" }}
-          >
+          <p className="italic text-[18px] text-gray-300 leading-[150%]">
             Misdiagnoses can lead to <em>excessive testing and prolonged treatments</em>,{" "}
             <em>wasting time, resources and money.</em>
           </p>
 
-          {/* Description Paragraph */}
-          <p
-            className="text-[18px] text-gray-300 leading-[150%]"
-            style={{ fontFamily: "Figtree, sans-serif" }}
-          >
+          {/* Description */}
+          <p className="text-[18px] text-gray-300 leading-[150%]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -40,20 +35,18 @@ const LostResourcesPage: React.FC = () => {
           </p>
 
           {/* Underline Link */}
-          <a
+          <Link 
             href="#"
-            className="inline-flex items-center gap-2 text-[20px] font-medium underline decoration-solid"
-            style={{ fontFamily: "Figtree, sans-serif" }}
+            className="inline-flex items-center gap-2 text-[20px] font-medium underline underline-offset-2 text-[#FFFFFF]"
           >
             Explore our product
-            {/* Arrow Icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
               height="20"
               fill="none"
               viewBox="0 0 24 24"
-              stroke="currentColor"
+              stroke="#FFFFFF"
               strokeWidth={2}
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -61,14 +54,14 @@ const LostResourcesPage: React.FC = () => {
               <path d="M7 17L17 7" />
               <path d="M7 7H17V17" />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {/* === RIGHT SIDE IMAGE === */}
         <div className="flex-1 flex justify-center md:justify-end">
-          <div className="w-full max-w-[480px] overflow-hidden">
+          <div className="w-full max-w-[480px] overflow-hidden rounded-[12px]">
             <Image
-              src="/Lost.jpg" // 👉 replace with your actual image name
+              src="/Lost.jpg"
               alt="Doctor consulting patient"
               width={480}
               height={320}

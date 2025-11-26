@@ -278,7 +278,7 @@ export default function SignUp() {
       </Box>
       <div className="w-105 mt-5">
          {/* SIGN UP */}
-        <UniversalButton text="Sign Up" href="/dashboard" fullWidth  />
+        <UniversalButton text="Sign Up" href="/get-started/login" fullWidth  />
 
         {/* OR */}
         <div className="flex items-center gap-4 my-4 ">

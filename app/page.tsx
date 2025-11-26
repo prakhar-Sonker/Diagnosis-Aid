@@ -8,9 +8,9 @@ import HowItWorks from "@/components/HowItWorks";
 import IntroducingData from "@/components/IntroducingData";
 import LostResourcesPage from "@/components/LostResourcesPage";
 import MagnitudePage from "@/components/MagnitudePage";
-// import MidSection from "@/components/MidSection";
 import Nav from "@/components/Nav";
 import PatientAnxiety from "@/components/PatientAnxiety";
+import PricingSection from "@/components/PricingSection";
 import Research from "@/components/Research";
 import Safe from "@/components/Safe";
 import Team from "@/components/Team";
@@ -36,6 +36,7 @@ export default function Home() {
       <Research />
       <Features />
       <HowItWorks />
+      <PricingSection />
       <Career />
       <Footer />
     </>

@@ -1,21 +1,21 @@
 import React from "react";
 import Image from "next/image";
+import { Link } from "lucide-react";
 
 const Magnitude: React.FC = () => {
   return (
-    <section className="w-full bg-[#161618] text-white py-20 px-10 md:px-24">
-      <div className="max-w-7xl mx-auto flex flex-col space-y-16">
+    <section className="w-full text-[#FFFFFF]">
+      <div className="px-24 flex flex-col space-y-16">
         {/* === Magnitude of the Problem (TOP SECTION) === */}
         <div className="text-center md:text-left space-y-6">
           <h2
-            className="text-[48px] font-bold leading-[100%]"
-            style={{ fontFamily: "Figtree, sans-serif", color: "#FFFFFF" }}
+            className="text-[48px] font-bold "
+            
           >
             Magnitude of the Problem
           </h2>
           <p
-            className="text-[24px] font-normal leading-[100%] text-gray-300 max-w-4xl"
-            style={{ fontFamily: "Figtree, sans-serif" }}
+            className="text-[24px] font-normal"
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -30,39 +30,27 @@ const Magnitude: React.FC = () => {
           <div className="flex-1 space-y-6">
             {/* Title */}
             <h3
-              className="text-[40px] font-bold leading-[100%]"
-              style={{ fontFamily: "Figtree, sans-serif", color: "#FFFFFF" }}
+              className="text-[40px] font-bold"
+              
             >
               Rate of Misdiagnoses
             </h3>
 
             {/* Description */}
-            <p
-              className="text-[16px] italic font-normal leading-[100%] text-gray-300"
-              style={{ fontFamily: "Figtree, sans-serif" }}
+            <span
+              className="text-[16px] italic font-normal"
             >
               According to a recent study, as many as 12 million adults in the
               US are misdiagnosed each year, with one in six cases leading to
-              serious harm. Lorem ipsum dolor sit amet, consectetur adipiscing
+              serious harm. 
+              </span> 
+              <span> Lorem ipsum dolor sit amet, consectetur adipiscing
               elit, sed do eiusmod tempor incididunt ut labore et dolore magna
               aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+              laboris nisi ut aliquip ex ea commodo consequat.</span>
 
             {/* Link */}
-            <div>
-              <a
-                href="#"
-                className="text-[20px] font-medium underline decoration-solid"
-                style={{
-                  fontFamily: "Figtree, sans-serif",
-                  color: "#FFFFFF",
-                  textUnderlineOffset: "2px",
-                }}
-              >
-                Learn more about our research ↗
-              </a>
-            </div>
+            
           </div>
 
           {/* RIGHT SIDE IMAGE */}
@@ -75,6 +63,14 @@ const Magnitude: React.FC = () => {
                 height={350}
                 className="object-cover"
               />
+              <div>
+  <Link 
+    href="#" 
+    className="text-[20px] font-medium underline decoration-solid underline-offset-2"
+  >
+    Learn more about our research ↗
+  </Link>
+</div>
             </div>
           </div>
         </div>
