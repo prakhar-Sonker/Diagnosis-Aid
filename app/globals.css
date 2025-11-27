@@ -24,3 +24,10 @@ body {
   font-family: var(--font-fig);
   background-color: #161618;
 }
+
+* {
+  box-sizing: border-box;
+}
+html, body {
+  overflow-x: hidden;
+}

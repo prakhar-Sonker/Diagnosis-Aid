@@ -59,7 +59,7 @@ const LostResourcesPage: React.FC = () => {
 
         {/* === RIGHT SIDE IMAGE === */}
         <div className="flex-1 flex justify-center md:justify-end">
-          <div className="w-full max-w-[480px] overflow-hidden rounded-[12px]">
+          <div className="w-full max-w-[480px] overflow-hidden">
             <Image
               src="/Lost.jpg"
               alt="Doctor consulting patient"

@@ -3,80 +3,75 @@ import Image from "next/image";
 
 function HospitalTrustImg() {
   return (
-    <div className=" w-full bg-[#2B2B2E] shadow-[0px_-30px_60px_0px_#000000]
- text-[#FFFFFF] py-10 px-6 text-center relative">
+    <div className="w-full bg-[#2B2B2E] shadow-[0px_-30px_60px_0px_#000000] text-white py-12 px-6 text-center">
       {/* ===== Title ===== */}
       <h3
-        className="text-[20px] font-medium text-white uppercase leading-[100%] tracking-[0%] mb-8"
+        className="text-[18px] md:text-[22px] font-medium uppercase mb-10"
         style={{ fontFamily: "Figtree, sans-serif" }}
       >
         HOSPITALS THAT TRUST US
       </h3>
 
-      {/* ===== Logos Section ===== */}
-      <div className="flex flex-wrap items-center justify-between gap-53px">
-        <div className="w-24 h-16 flex items-center justify-center">
-          <Image
-            src="/frame9.png"
-            alt="logo"
-            width={70}
-            height={85}
-            className="object-contain"
-          />
-        </div>
+      {/* ===== Logos Grid ===== */}
+      <div
+        className="flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-20"
+      >
+        {/* Logo 1 */}
+        <Image
+          src="/frame9.png"
+          alt="logo"
+          width={70}
+          height={70}
+          className="object-contain w-16 md:w-20 lg:w-18"
+        />
 
-        <div className="w-24 h-16 flex items-center justify-center">
-          <Image
-            src="/frame10.png"
-            alt="logo"
-            width={70}
-            height={88}
-            className="object-contain"
-          />
-        </div>
+        {/* Logo 2 */}
+        <Image
+          src="/frame10.png"
+          alt="logo"
+          width={90}
+          height={90}
+          className="object-contain w-16 md:w-20 lg:w-31"
+        />
 
-        <div className="w-24 h-16 flex items-center justify-center">
-          <Image
-            src="/image8.png"
-            alt="logo"
-            width={70}
-            height={88}
-            className="object-contain"
-          />
-        </div>
+        {/* Logo 3 */}
+        <Image
+          src="/image8.png"
+          alt="logo"
+          width={90}
+          height={90}
+          className="object-contain w-16 md:w-20 lg:w-21"
+        />
 
-        <div className="w-24 h-16 flex items-center justify-center">
-          <Image
-            src="/image7.png"
-            alt="logo"
-            width={70}
-            height={88}
-            className="object-contain"
-          />
-        </div>
+        {/* Logo 4 */}
+        <Image
+          src="/image7.png"
+          alt="logo"
+          width={90}
+          height={90}
+          className="object-contain w-16 md:w-20 lg:w-22"
+        />
 
-        <div className="w-24 h-16 flex items-center justify-center">
-          <Image
-            src="/image9.png"
-            alt="logo"
-            width={70}
-            height={88}
-            className="object-contain"
-          />
-        </div>
+        {/* Logo 5 */}
+        <Image
+          src="/image9.png"
+          alt="logo"
+          width={90}
+          height={90}
+          className="object-contain w-16 md:w-20 lg:w-42"
+        />
 
-        <div className="w-24 h-16 flex items-center justify-center">
-          <Image
-            src="/south-african-medical-research-council-samrc-vector-logo 1.png"
-            alt="logo"
-            width={70}
-            height={88}
-            className="object-contain"
-          />
-        </div>
+        {/* Logo 6 */}
+        <Image
+          src="/south-african-medical-research-council-samrc-vector-logo 1.png"
+          alt="logo"
+          width={90}
+          height={90}
+          className="object-contain w-16 md:w-20 lg:w-48"
+        />
       </div>
     </div>
   );
-};
+}
 
 export default HospitalTrustImg;

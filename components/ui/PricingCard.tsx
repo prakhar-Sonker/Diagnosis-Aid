@@ -21,24 +21,24 @@ const PricingCard: React.FC<PricingCardProps> = ({
 }) => {
   return (
     <div className={`
-      w-70 h-80 
+      w-77 h-100
       flex flex-col justify-between 
       p-6 rounded-2xl 
       bg-[#FFFFFF36]
       border-2 ${border}
-      text-white
+      text-[#FFFFFF]
       
     `}>
       
       {/* Top Section */}
       <div className="space-y-3">
-        <h3 className="text-[28px] font-semibold">{title}</h3>
-        <p className="text-[16px] text-gray-300">{subtitle}</p>
+        <h3 className="text-[36px] font-bold">{title}</h3>
+        <p className="text-[24px] font-medium text-[#FFFFFF]">{subtitle}</p>
 
-        <div className="pt-4">
-          <span className="text-[42px] font-bold">${price}</span>
+        <div className="pt-4 flex flex-row items-center">
+          <span className="text-[48px] font-black">${price}</span>
           {priceNote && (
-            <span className="text-gray-400 text-[14px] pl-2">{priceNote}</span>
+            <span className="text-[#FFFFFF52] text-[16px] pl-2">{priceNote}</span>
           )}
         </div>
       </div>
@@ -48,9 +48,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
         className="
           w-full py-3 mt-4 
           rounded-lg 
-          border border-gray-400 
-          text-white 
-          font-medium 
+          text-[#303033]
+          font-bold
+          text-[20px]
+          bg-[#FFFFFF]
           hover:bg-white hover:text-black transition
         "
       >

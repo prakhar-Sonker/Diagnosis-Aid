@@ -25,21 +25,28 @@ const Research = () => {
   ];
 
   return (
-    <section className="w-full bg-[#161618] text-white py-20 px-10 md:px-24">
-      {/* === Left-Aligned Content === */}
-      <div className="max-w-4xl mx-auto md:mx-0 text-left space-y-8 mb-16">
+    <section className="w-full bg-[#161618] text-[#FFFFFF] py-12 px-4 sm:px-10 md:py-20 md:px-16 lg:px-24">
+
+      {/* ===== Heading + Description ===== */}
+      <div className="w-full max-w-4xl mx-auto md:mx-0 text-left space-y-6 mb-12 md:mb-16">
+
         {/* Heading */}
         <h2
-          className="text-[48px] font-bold leading-[100%]"
-          style={{ fontFamily: "Figtree, sans-serif" }}
+          className="
+            text-[48px]
+            font-bold
+            leading-tight
+          "
         >
           Research
         </h2>
 
-        {/* Subtext */}
+        {/* Subtitle */}
         <p
-          className="text-[20px] font-normal text-gray-300 leading-[150%] max-w-2xl"
-          style={{ fontFamily: "Figtree, sans-serif" }}
+          className="
+            text-[24px]
+            font-normal text-[#FFFFFF] 
+          "
         >
           We research generative models and how to align them with human values.
         </p>
@@ -47,8 +54,12 @@ const Research = () => {
         {/* Link */}
         <a
           href="#"
-          className="inline-flex items-center gap-2 text-[20px] font-medium underline decoration-solid hover:text-gray-300 transition-all"
-          style={{ fontFamily: "Figtree, sans-serif" }}
+          className="
+            inline-flex items-center gap-2 
+            text-[20px] font-medium 
+            underline decoration-solid 
+            hover:text-gray-300 transition-all
+          "
         >
           View All Updates
           <svg
@@ -68,36 +79,63 @@ const Research = () => {
         </a>
       </div>
 
-      {/* === Research Cards === */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+      {/* ===== Research Cards Grid ===== */}
+      <div
+        className="
+          grid 
+          grid-cols-1 
+          sm:grid-cols-2 
+          lg:grid-cols-4 
+          gap-y-10 gap-x-6
+        "
+      >
         {researchItems.map((item, index) => (
-          <div key={index} className="flex flex-col space-y-4">
-            <div className="w-full h-[300px] md:h-[300px] overflow-hidden">
+          <div 
+            key={index} 
+            className="flex flex-col space-y-4 w-full items-center sm:items-start"
+          >
+            {/* Image Container */}
+            {/* Changed fixed width to max-width to ensure it shrinks on small mobile screens */}
+            <div
+              className="
+                w-full max-w-[320px]
+                h-[330px] sm:h-[280px] md:h-[300px] 
+                overflow-hidden 
+              "
+            >
               <Image
                 src={item.img}
                 alt={item.title}
-                width={300}
-                height={300}
-                className="object-cover transition-transform duration-300 hover:scale-105"
+                width={500}
+                height={500}
+                className="
+                  object-cover w-full h-full 
+                  transition-transform duration-300 
+                  hover:scale-105
+                "
               />
             </div>
-            <div>
+
+            {/* Title & Date */}
+            {/* Added max-width here so text aligns with the image boundary */}
+            <div className="flex flex-col w-full max-w-[320px]">
               <h3
-                className="text-[20px] font-semibold leading-snug"
-                style={{ fontFamily: "Figtree, sans-serif" }}
+                className="text-[24px] font-bold leading-tight"
               >
                 {item.title}
               </h3>
+
               <p
-                className="text-gray-400 text-[16px] mt-1"
-                style={{ fontFamily: "Figtree, sans-serif" }}
+                className="text-[#FFFFFF] font-semibold text-[16px] mt-2"
               >
                 {item.date}
               </p>
             </div>
+
           </div>
         ))}
       </div>
+
     </section>
   );
 };

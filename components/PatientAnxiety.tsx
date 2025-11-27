@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const PatientAnxiety: React.FC = () => {
   return (
-    <section className="w-full bg-[#161618] text-white py-20 px-10 md:px-24">
+    <section className="w-full bg-[#161618] text-white py lg:py-20 px-10 md:px-24">
       {/* === Top Divider === */}
       <div className="border-t-2 border-white w-full mb-16"></div>
 

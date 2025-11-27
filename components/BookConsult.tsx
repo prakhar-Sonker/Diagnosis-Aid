@@ -49,7 +49,7 @@ export default function BookAnAppointment() {
       </div>
 
       {/* ---------------- MAIN CONTENT ---------------- */}
-      <div className="p-10 flex gap-10 justify-center">
+      <div className="p-10 flex gap-10 justify-center mt-4">
         {/* Left: Calendar */}
         <Calendar />
 

@@ -1,36 +1,38 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
 const HowItWorks = () => {
   return (
     <section
-      className="w-full text-white px-6 md:px-20 py-28"
+      className="w-full text-white px-4 sm:px-8 md:px-14 lg:px-20 py lg:py-20 md:py-28 "
       style={{
         background:
           "linear-gradient(134.68deg, #05B7CE 14.12%, #06B2CC 15.75%, #1B5DB2 41.2%, #2828A1 59.62%, #2D139B 68.28%)",
       }}
     >
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
         {/* LEFT COLUMN */}
-        <div className="flex flex-col space-y-10">
+        <div className="flex flex-col space-y-10 relative">
 
-          {/* Heading exactly like Figma */}
-          <h2
-            className="text-[48px] font-bold leading-[100%]"
-            style={{ fontFamily: "Figtree, sans-serif" }}
-          >
+          {/* RESPONSIVE HEADING */}
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold leading-tight">
             How It Works
           </h2>
 
-          {/* Figma exact image size */}
-          <div className="w-full border-2  border-white rounded-[22px] overflow-hidden">
+          {/* RESPONSIVE IMAGE CONTAINER */}
+          <div className="
+            border-2 border-white rounded-[22px] overflow-hidden 
+            w-full max-w-[600px] sm:max-w-[500px] md:max-w-[820px] -ml-100
+          ">
             <Image
               src="/howworkImg.png"
               alt="How It Works UI"
-              width={430}
-              height={720}
-              className="object-contain w-full h-full"
+              width={820}
+              height={600}
+              className="object-contain w-full h-auto"
               priority
             />
           </div>
@@ -39,20 +41,16 @@ const HowItWorks = () => {
         {/* RIGHT COLUMN */}
         <div className="flex flex-col space-y-10">
 
-          {/* Top lorem ipsum paragraph */}
-          <p
-            className="text-[24px] leading-[100%] max-w-[600px]"
-            style={{ fontFamily: "Figtree, sans-serif", fontWeight: 400 }}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          {/* DESCRIPTION */}
+          <p className="text-[18px] sm:text-[20px] md:text-[24px] leading-[140%]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
 
-          {/* Get Started link */}
+          {/* GET STARTED LINK */}
           <a
             href="#"
-            className="inline-flex items-center gap-2 underline text-[20px]"
-            style={{ fontFamily: "Figtree, sans-serif" }}
+            className="inline-flex items-center gap-2 underline text-[18px] sm:text-[20px] font-medium"
           >
             Get Started
             <svg
@@ -70,81 +68,39 @@ const HowItWorks = () => {
             </svg>
           </a>
 
-          {/* **STEPS — EXACT Figma SPACING + TYPOGRAPHY** */}
+          {/* STEPS */}
           <div className="space-y-10">
 
-            {/* Step 1 */}
-            <div>
-              <h3
-                className="text-[32px] font-bold leading-[100%]"
-                style={{ fontFamily: "Figtree, sans-serif" }}
-              >
-                1. Write a healthcare input
-              </h3>
-              <p
-                className="mt-4"
-                style={{
-                    fontFamily: "Figtree, sans-serif",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: "16px",
-                    lineHeight: "140%",
-                    letterSpacing: "0%",
-                    color: "rgba(255,255,255,0.95)",
-                }}>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
-               </p>
-            </div>
-
-            {/* Step 2 */}
-            <div>
-              <h3
-                className="text-[32px] font-bold leading-[100%]"
-                style={{ fontFamily: "Figtree, sans-serif" }}
-              >
-                2. Get an AI advice
-              </h3>
-              <p
-                className="mt-4"
-                style={{
-                    fontFamily: "Figtree, sans-serif",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: "16px",
-                    lineHeight: "140%",
-                    letterSpacing: "0%",
-                    color: "rgba(255,255,255,0.95)",
-                }}>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
-               </p>
-            </div>
-
-            {/* Step 3 */}
-            <div>
-              <h3
-                className="text-[32px] font-bold leading-[100%]"
-                style={{ fontFamily: "Figtree, sans-serif" }}
-              >
-                3. Book consultation with nearby doctor
-              </h3>
-              <p
-                className="mt-4"
-                style={{
-                    fontFamily: "Figtree, sans-serif",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: "16px",
-                    lineHeight: "140%",
-                    letterSpacing: "0%",
-                    color: "rgba(255,255,255,0.95)",
-                }}>
-                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
-               </p>
-
-            </div>
+            {/* STEP TEMPLATE FUNCTION */}
+            {[
+              {
+                heading: "1. Write a healthcare input",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              },
+              {
+                heading: "2. Get an AI advice",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              },
+              {
+                heading: "3. Book consultation with nearby doctor",
+                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              },
+            ].map((step, index) => (
+              <div key={index}>
+                <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold">
+                  {step.heading}
+                </h3>
+                <p
+                  className="mt-3 sm:mt-4 text-[14px] sm:text-[15px] md:text-[16px] italic leading-[140%] text-white/90"
+                >
+                  {step.text}
+                </p>
+              </div>
+            ))}
 
           </div>
         </div>
+
       </div>
     </section>
   );

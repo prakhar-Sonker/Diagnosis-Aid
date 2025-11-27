@@ -132,7 +132,7 @@ const BookAnAppointment = () => {
         </p>
       </div>
       {/* cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:place-items-center lg:px-80 lg:gap-6 lg:py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:place-items-center lg:px-80 lg:gap-6 lg:py-10 mt-4">
         {doctors.map((doc, index) => (
           <DoctorCard
             key={index}
