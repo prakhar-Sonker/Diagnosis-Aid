@@ -1,16 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Background from "./Background";
-
 function Hero() {
   return (
-    <section className="relative w-full flex flex-col items-center justify-center min-h-screen overflow-hidden text-white px-6 pt-32">
-
-      {/* === Background Layers === */}
-      <Background />
-
-      {/* === SVG BACKDROP === */}
+    <section className="relative w-full flex flex-col items-center justify-center min-h-screen overflow-hidden text-white px-6 mt-15 ">
+      {" "}
+      {/* === Background Layers === */} <Background />{" "}
+      {/* === SVG BACKDROP === */}{" "}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200%] md:w-[150%] lg:w-full opacity-20">
+        {" "}
         <svg
           width="100%"
           height="100%"
@@ -18,46 +16,30 @@ function Hero() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* YOUR SVG CONTENT HERE (unchanged) */}
-        </svg>
-      </div>
-
-      {/* === CENTER CONTENT === */}
+          {" "}
+          {/* YOUR SVG CONTENT HERE (unchanged) */}{" "}
+        </svg>{" "}
+      </div>{" "}
+      {/* === CENTER CONTENT === */}{" "}
       <div className="z-10 flex flex-col items-center justify-center max-w-[90%] md:max-w-3xl lg:max-w-4xl text-center space-y-6 md:space-y-8">
-
-        {/* Heading */}
-        <h1 className="
-          font-[Figtree] font-bold 
-          text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px]
-          leading-[120%] text-white
-        ">
-          Revolutionizing Medical <br /> Diagnosis with DiagnosisAid
-        </h1>
-
-        {/* Paragraph */}
-        <p className="
-          font-[Figtree] font-medium 
-          text-[16px] sm:text-[18px] md:text-[20px]
-          text-white max-w-2xl
-        ">
+        {" "}
+        {/* Heading */}{" "}
+        <h1 className=" font-[Figtree] font-bold text-[36px] sm:text-[48px] md:text-[56px] lg:text-[64px] leading-[120%] text-white ">
+          {" "}
+          Revolutionizing Medical <br /> Diagnosis with DiagnosisAid{" "}
+        </h1>{" "}
+        {/* Paragraph */}{" "}
+        <p className=" font-[Figtree] font-medium text-[16px] sm:text-[18px] md:text-[20px] text-white max-w-2xl ">
+          {" "}
           Welcome to DiagnosisAid, the AI-powered medical diagnosis tool that is
           transforming the healthcare industry. Our innovative solution is
           changing the way doctors diagnose and treat patients, providing
-          faster, more accurate results.
-        </p>
-
-        {/* Button */}
-        <button
-          className="
-            bg-white text-[#161618] 
-            font-[Figtree] font-bold
-            text-[16px] sm:text-[18px] md:text-[20px]
-            rounded-xl 
-            flex items-center justify-center gap-2.5
-            px-6 sm:px-10 py-3 sm:py-5
-          "
-        >
-          Learn about DiagnosisAid
+          faster, more accurate results.{" "}
+        </p>{" "}
+        {/* Button */}{" "}
+        <button className=" bg-white text-[#161618] font-[Figtree] font-bold text-[16px] sm:text-[18px] md:text-[20px] rounded-xl flex items-center justify-center gap-2.5 px-6 sm:px-10 py-3 sm:py-5 ">
+          {" "}
+          Learn about DiagnosisAid{" "}
           <svg
             width="22"
             height="22"
@@ -65,66 +47,44 @@ function Hero() {
             viewBox="0 0 24 24"
             fill="none"
           >
+            {" "}
             <path
               d="M7 17L17 7"
               stroke="#161618"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-            />
+            />{" "}
             <path
               d="M7 7H17V17"
               stroke="#161618"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-            />
-          </svg>
-        </button>
-
-      </div>
-
-      {/* === PRODUCT IMAGE === */}
-      <div className="mt-12 md:mt-16 w-full flex justify-center px-4 relative">
+            />{" "}
+          </svg>{" "}
+        </button>{" "}
+      </div>{" "}
+      {/* === PRODUCT IMAGE === */}{" "}
+      <div className="mt-12 md:mt-16 w-full justify-center px-4 relative hidden sm:flex">
+        {" "}
         <Image
           src="/datype.png"
           alt="DiagnosisAid Product"
           width={1320}
           height={472}
-          className="
-            rounded-[40px_0px] object-contain
-            w-full max-w-[95%] sm:max-w-[90%] md:max-w-[80%] lg:max-w-[70%]
-          "
+          className=" rounded-[40px_0px] object-contain w-full max-w-[95%] sm:max-w-[90%] md:max-w-[80%] lg:max-w-[70%] "
           priority
-        />
-      </div>
-
+        />{" "}
+      </div>{" "}
     </section>
   );
 }
-
 export default Hero;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React from "react";
 // import Image from "next/image";
 // import Background from "./Background";
-
 
 // function Hero(){
 //   return (
@@ -132,7 +92,7 @@ export default Hero;
 //     <Background />
 //     <section className="container mx-auto relative flex flex-col items-center justify-center min-h-screen overflow-hidden text-white  pt-32  ">
 //       {/* === Background Layers === */}
-      
+
 //       <div className="absolute -top-5">
 //         <svg width="1940" height="1319" viewBox="0 0 1440 1119" fill="none" xmlns="http://www.w3.org/2000/svg">
 // <g opacity="0.2" clip-path="url(#clip0_125_719)">
@@ -235,30 +195,10 @@ export default Hero;
 //     priority
 //   />
 // </div>
-  
 
-  
-        
-  
 //     </section>
 //     </div>
 //   );
 // };
 
 // export default Hero;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

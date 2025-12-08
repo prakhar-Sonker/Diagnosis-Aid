@@ -6,7 +6,7 @@ import Background from "./Background"; // keep your existing Background import
 
 const Features = () => {
   return (
-    <section className=" w-full !bg-[#161618] text-white py lg:py-16 px-6 sm:px-10 md:px-16 lg:px-24">
+    <section className=" w-full !bg-[#161618] text-white py lg:py-16 px-6 sm:px-10 md:px-16 lg:px-24 mb-10">
 
       {/* ===== BACKGROUND (always behind content) ===== */}
       <div className="absolute inset-0 z-0 pointer-events-none">

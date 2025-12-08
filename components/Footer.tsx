@@ -16,7 +16,7 @@ const Footer = () => {
   const policyLinks = ["Terms & Policies", "Privacy Policy", "Brand Guidelines"];
 
   // Custom class for link styling
-  const linkClasses = "text-white/80 text-base md:text-lg hover:text-white transition-colors cursor-pointer";
+  const linkClasses = "text-white/80 text-sm md:text-base hover:text-white transition-colors cursor-pointer";
 
   // SVG component for the Back To Top Arrow/Circle
   const BackToTopIcon = () => (
@@ -26,131 +26,114 @@ const Footer = () => {
   );
 
   return (
-    // Main container: full width, dark background, padding
-    <footer className="w-full bg-[#161618] text-white py-16 md:py-24 px-6 flex justify-center">
+    <footer className="w-full bg-[#161618] text-white py-12 md:py-16 lg:py-24 px-6 md:px-12 lg:px-20 flex justify-center">
       {/* Content wrapper: max width container */}
       <div className="w-full max-w-[1320px] flex flex-col">
 
-        {/* ======================= MAIN CONTENT GRID (4 COLUMNS) ======================= */}
-        <div className="grid grid-cols-4 gap-8  pb-12 md:pb-16">
+        {/* ======================= TOP SECTION (Logo, Text, Nav Links) ======================= */}
+        {/* Mobile: Logo/Text (full width) followed by Links (grid-cols-3) */}
+        {/* Tablet/Laptop: Grid 4-columns total (Logo | Spacer | Links | Links) */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 lg:gap-16 pb-12 md:pb-16">
 
-          {/* LEFT SIDE: Logo, Text, Copyright (Takes 1 of 4 columns on large screens) */}
-          {/* Now using explicit mb-* for clear, understandable gaps */}
-          <div className="col-span-4 lg:col-span-1">
+          {/* LEFT SIDE: Logo, Text, Copyright */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-1 space-y-4 md:space-y-6">
             
             {/* Logo + DiagnosisAid */}
-            <div className="flex items-center gap-3 mb-4">
-              <img src="/dalogo.png" alt="DiagnosisAid Logo" className="w-8 h-8 md:w-10 md:h-10"/>
-              <h2 className="text-2xl font-black leading-none" 
+            <div className="flex items-center gap-3">
+              <img src="/dalogo.png" alt="DiagnosisAid Logo" className="w-7 h-7 md:w-8 md:h-8"/>
+              <h2 className="text-xl md:text-2xl font-black leading-none" 
                   style={{ fontFamily: "Nexa, sans-serif" }}> 
                 DiagnosisAid
               </h2>
             </div>
 
             {/* Paragraph */}
-            {/* Standard gap below the paragraph */}
-            <p className="text-sm md:text-base leading-relaxed max-w-sm text-white/90 mb-6">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-              quis nostrud exercitation.
+            <p className="text-sm md:text-base leading-relaxed max-w-sm text-white/90">
+              Harnessing quantum-powered AI to deliver faster, more accurate diagnostic support to healthcare professionals globally.
             </p>
-
-            {/* DiagnosisAid © 2024 (Sits just above the white line) */}
-            {/* mb-0 ensures the white line's padding starts right after this text ends. */}
-            
+             
+            {/* Copyright moved down to bottom section for alignment */}
           </div>
           
-          {/* SPACER COLUMN (Takes 1 of 4 columns on large screens) */}
-          <div className="hidden lg:block lg:col-span-1">
-            {/* This empty div creates the wide gap by shifting content right */}
-          </div>
+          {/* SPACER COLUMN (Only visible on large desktop to push links right) */}
+          <div className="hidden lg:block lg:col-span-1"></div>
 
-
-          {/* RIGHT SIDE: 3 COLUMN LINKS (Takes 2 of 4 columns on large screens) */}
-          <div className="col-span-4 lg:col-span-2 grid grid-cols-3 gap-6 md:gap-12 pt-8 lg:pt-0">
+          {/* RIGHT SIDE: 3 COLUMN LINKS 
+              Mobile/Tablet: Stacks right after the logo/text block. It uses 3 columns itself for efficient use of mobile width. 
+              Desktop: Takes the remaining 2 columns.
+          */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-2 grid grid-cols-3 gap-6 md:gap-12 pt-4 md:pt-0">
 
             {/* Research Column */}
-            <div className="space-y-4">
-              <h3 className="text-base md:text-xl font-bold mb-4">Research</h3>
-              <div className="flex flex-col space-y-3">
-                {researchLinks.map((item) => (
-                  <a key={item} href={`#${item.toLowerCase()}`} className={linkClasses}>
-                    {item}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Company Column */}
-            <div className="space-y-4">
-              <h3 className="text-base md:text-xl font-bold mb-4">Company</h3>
-              <div className="flex flex-col space-y-3">
-                {companyLinks.map((item) => (
-                  <a key={item} href={`#${item.toLowerCase().replace(/\s/g, '-')}`} className={linkClasses}>
-                    {item}
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            {/* Product Column */}
-            <div className="space-y-4">
-              <h3 className="text-base md:text-xl font-bold mb-4">Product</h3>
-              <div className="flex flex-col space-y-3">
-                {productLinks.map((item) => (
-                  <a key={item} href={`#${item.toLowerCase().replace(/\s/g, '-')}`} className={linkClasses}>
-                    {item}
-                  </a>
-                ))}
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div className="mb-4"> 
-              <span className="text-xl md:text-2xl font-bold">
-                DiagnosisAid 
-              </span>
-              <span className="text-sm md:text-base font-semibold opacity-90 ml-1">
-                © 2024
-              </span>
-            </div>
-
-        
-
-        {/* ======================= BOTTOM ROW (Mirrors the 4 Column Grid) ======================= */}
-        <div className="grid grid-cols-4 gap-8 pt-8 border-t-2 border-[#ffffff] pt-6">
-          
-
-          {/* LEFT SIDE: Policy Links (Col 1) - Vertically Stacked to match image */}
-          <div className="col-span-4 lg:col-span-1 flex flex-col space-y-2 order-2 lg:order-1">
-            {policyLinks.map((item) => (
-              <a key={item} href={`#${item.toLowerCase().replace(/\s/g, '-')}`} 
-                 className="text-base text-white/90 hover:text-white transition-colors cursor-pointer">
-                {item}
-              </a>
-            ))}
-          </div>
-
-          {/* SPACER COLUMN (Col 2) */}
-          <div class="hidden lg:block lg:col-span-1 order-3"></div>
-
-          {/* RIGHT SIDE: Social Links + Back To Top (Cols 3 & 4) */}
-          <div className="col-span-4 lg:col-span-2 flex flex-col items-start lg:items-end order-1 lg:order-4 space-y-4 mt-4 lg:mt-0">
-            
-            {/* Social Links Row */}
-            <div className="flex gap-4 sm:gap-6 text-white/80 flex-wrap justify-start lg:justify-end w-full">
-              {socialLinks.map((item) => (
-                <a key={item} href={`#${item.toLowerCase()}`} 
-                   className="text-base hover:text-white transition-colors">
+            <div className="flex flex-col space-y-3 md:space-y-4">
+              <h3 className="text-base md:text-lg font-bold mb-1">Research</h3>
+              {researchLinks.map((item) => (
+                <a key={item} href={`#${item.toLowerCase()}`} className={linkClasses}>
                   {item}
                 </a>
               ))}
             </div>
 
-            {/* Back To Top Button - Now includes the SVG icon */}
-            <a href="#top" className="flex items-center gap-2 text-sm text-white hover:opacity-80 transition-opacity">
+            {/* Company Column */}
+            <div className="flex flex-col space-y-3 md:space-y-4">
+              <h3 className="text-base md:text-lg font-bold mb-1">Company</h3>
+              {companyLinks.map((item) => (
+                <a key={item} href={`#${item.toLowerCase().replace(/\s/g, '-')}`} className={linkClasses}>
+                  {item}
+                </a>
+              ))}
+            </div>
+
+            {/* Product Column */}
+            <div className="flex flex-col space-y-3 md:space-y-4">
+              <h3 className="text-base md:text-lg font-bold mb-1">Product</h3>
+              {productLinks.map((item) => (
+                <a key={item} href={`#${item.toLowerCase().replace(/\s/g, '-')}`} className={linkClasses}>
+                  {item}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <hr className="border-t border-white/20"/>
+
+        {/* ======================= BOTTOM ROW (Copyright, Policy, Social, Back To Top) ======================= */}
+        {/* Mobile: Copyright -> Policy -> Social/Back to Top */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8 pt-4 md:pt-6 items-center">
+          
+          {/* LEFT SIDE: Copyright (Col 1) */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-1 order-1">
+            <span className="text-sm md:text-base font-semibold text-white/90">
+              &copy; {new Date().getFullYear()} DiagnosisAid. All rights reserved.
+            </span>
+          </div>
+          
+          {/* CENTER: Policy Links (Col 2) */}
+          <div className="col-span-1 md:col-span-2 lg:col-span-1 flex flex-wrap gap-x-4 gap-y-2 order-3 md:order-2">
+            {policyLinks.map((item) => (
+              <a key={item} href={`#${item.toLowerCase().replace(/\s/g, '-')}`} 
+                 className="text-sm text-white/70 hover:text-white transition-colors cursor-pointer">
+                {item}
+              </a>
+            ))}
+          </div>
+
+          {/* RIGHT SIDE: Social Links + Back To Top (Cols 3 & 4) */}
+          <div className="col-span-1 md:col-span-4 lg:col-span-2 flex flex-col sm:flex-row justify-between items-start sm:items-center order-2 md:order-3 pt-4 md:pt-0">
+            
+            {/* Social Links Row */}
+            <div className="flex gap-4 text-white/80">
+              {socialLinks.map((item) => (
+                <a key={item} href={`#${item.toLowerCase()}`} 
+                   className="text-sm md:text-base hover:text-white transition-colors">
+                  {item}
+                </a>
+              ))}
+            </div>
+
+            {/* Back To Top Button */}
+            <a href="#top" className="flex items-center gap-1 text-sm md:text-base text-white hover:opacity-80 transition-opacity mt-4 sm:mt-0">
               Back To Top
               <BackToTopIcon />
             </a>

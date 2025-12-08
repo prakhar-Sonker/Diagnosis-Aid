@@ -25,7 +25,6 @@ const GetStarted = () => {
           <Image src="/dawhite.png" width={40} height={40} alt="logo" />
           <h1
             className="text-[20px] font-bold leading-[100%]"
-            style={{ fontFamily: "Figtree" }}
           >
             DiagnosisAid
           </h1>

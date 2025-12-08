@@ -3,7 +3,8 @@ import Image from "next/image";
 
 function HospitalTrustImg() {
   return (
-    <div className="w-full bg-[#2B2B2E] shadow-[0px_-30px_60px_0px_#000000] text-white py-12 px-6 text-center">
+    <div className="w-full bg-[#2B2B2E] shadow-[0px_-30px_60px_0px_#000000] text-[#FFFFFF] py-10 px-6 text-center">
+      
       {/* ===== Title ===== */}
       <h3
         className="text-[18px] md:text-[22px] font-medium uppercase mb-10"
@@ -12,17 +13,16 @@ function HospitalTrustImg() {
         HOSPITALS THAT TRUST US
       </h3>
 
-      {/* ===== Logos Grid ===== */}
-      <div
-        className="flex flex-wrap items-center justify-center gap-10 md:gap-16 lg:gap-20"
-      >
+      {/* ===== Logos Wrapper ===== */}
+      <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-8 md:gap-12 lg:gap-16">
+
         {/* Logo 1 */}
         <Image
           src="/frame9.png"
           alt="logo"
-          width={70}
-          height={70}
-          className="object-contain w-16 md:w-20 lg:w-18"
+          width={90}
+          height={90}
+          className="object-contain w-14 md:w-20 lg:w-24"
         />
 
         {/* Logo 2 */}
@@ -31,7 +31,7 @@ function HospitalTrustImg() {
           alt="logo"
           width={90}
           height={90}
-          className="object-contain w-16 md:w-20 lg:w-31"
+          className="object-contain w-16 md:w-24 lg:w-28"
         />
 
         {/* Logo 3 */}
@@ -40,7 +40,7 @@ function HospitalTrustImg() {
           alt="logo"
           width={90}
           height={90}
-          className="object-contain w-16 md:w-20 lg:w-21"
+          className="object-contain w-14 md:w-20 lg:w-24"
         />
 
         {/* Logo 4 */}
@@ -49,7 +49,7 @@ function HospitalTrustImg() {
           alt="logo"
           width={90}
           height={90}
-          className="object-contain w-16 md:w-20 lg:w-22"
+          className="object-contain w-14 md:w-20 lg:w-24"
         />
 
         {/* Logo 5 */}
@@ -58,7 +58,7 @@ function HospitalTrustImg() {
           alt="logo"
           width={90}
           height={90}
-          className="object-contain w-16 md:w-20 lg:w-42"
+          className="object-contain w-20 md:w-28 lg:w-32"
         />
 
         {/* Logo 6 */}
@@ -67,7 +67,7 @@ function HospitalTrustImg() {
           alt="logo"
           width={90}
           height={90}
-          className="object-contain w-16 md:w-20 lg:w-48"
+          className="object-contain w-20 md:w-28 lg:w-36"
         />
       </div>
     </div>

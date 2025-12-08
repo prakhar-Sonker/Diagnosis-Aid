@@ -2,24 +2,41 @@ import React from "react";
 
 const Safe = () => {
   return (
-    <section className="w-full bg-[#161618] text-white py-20 px-10 md:px-24">
-
+    <section className="w-full bg-[#161618] text-white py-12 md:py-16 lg:py-20 px-6 md:px-12 lg:px-24">
       {/* === Main Layout === */}
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-12">
-        {/* === Left Side === */}
-        <div className="flex-1">
+      {/* - flex-col: Stacked on Mobile
+          - md:flex-row: Side-by-side on Tablet & Laptop
+          - gap-8: Smaller gap on mobile
+          - md:gap-12: Larger gap on bigger screens
+      */}
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8 md:gap-12 lg:gap-20">
+        
+        {/* === Left Side (Heading) === */}
+        <div className="w-full md:flex-1">
           <h2
-            className="text-[48px] font-bold leading-[100%]"
+            className="
+              font-bold leading-[110%]
+              /* Responsive Font Sizes */
+              text-[32px]       /* Mobile */
+              md:text-[40px]    /* Tablet */
+              lg:text-[48px]    /* Laptop */
+            "
             style={{ fontFamily: "Figtree, sans-serif" }}
           >
             Safety & Responsibility
           </h2>
         </div>
 
-        {/* === Right Side === */}
-        <div className="flex-1 space-y-6">
+        {/* === Right Side (Content) === */}
+        <div className="w-full md:flex-1 space-y-6">
           <p
-            className="text-[20px] text-gray-200 leading-[150%]"
+            className="
+              text-gray-200 leading-[160%]
+              /* Responsive Font Sizes */
+              text-[16px]       /* Mobile */
+              md:text-[18px]    /* Tablet */
+              lg:text-[20px]    /* Laptop */
+            "
             style={{ fontFamily: "Figtree, sans-serif" }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,7 +49,13 @@ const Safe = () => {
 
           <a
             href="#"
-            className="inline-flex items-center gap-2 text-[20px] font-medium underline decoration-solid hover:text-gray-300 transition-all"
+            className="
+              inline-flex items-center gap-2 
+              font-medium underline decoration-solid 
+              hover:text-gray-300 transition-all
+              /* Responsive Text for Link */
+              text-[16px] md:text-[18px] lg:text-[20px]
+            "
             style={{ fontFamily: "Figtree, sans-serif" }}
           >
             Learn about safety
@@ -46,6 +69,8 @@ const Safe = () => {
               strokeWidth={2}
               strokeLinecap="round"
               strokeLinejoin="round"
+              // Scale icon slightly on larger screens if needed, otherwise w-5 h-5 is standard
+              className="w-5 h-5 lg:w-6 lg:h-6"
             >
               <path d="M7 17L17 7" />
               <path d="M7 7H17V17" />

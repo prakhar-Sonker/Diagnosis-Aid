@@ -6,7 +6,11 @@ import Image from "next/image";
 const HowItWorks = () => {
   return (
     <section
-      className="w-full text-white px-4 sm:px-8 md:px-14 lg:px-20 py lg:py-20 md:py-28 "
+      className="
+        w-full text-white 
+        px-4 sm:px-8 md:px-14 lg:px-20 
+        py-16 md:py-24 lg:py-28
+      "
       style={{
         background:
           "linear-gradient(134.68deg, #05B7CE 14.12%, #06B2CC 15.75%, #1B5DB2 41.2%, #2828A1 59.62%, #2D139B 68.28%)",
@@ -17,16 +21,24 @@ const HowItWorks = () => {
         {/* LEFT COLUMN */}
         <div className="flex flex-col space-y-10 relative">
 
-          {/* RESPONSIVE HEADING */}
+          {/* Heading */}
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-bold leading-tight">
             How It Works
           </h2>
 
-          {/* RESPONSIVE IMAGE CONTAINER */}
-          <div className="
-            border-2 border-white rounded-[22px] overflow-hidden 
-            w-full max-w-[600px] sm:max-w-[500px] md:max-w-[820px] -ml-100
-          ">
+          {/* IMAGE FIXED */}
+          <div
+            className="
+              border-2 border-white rounded-[22px] overflow-hidden
+              
+              /* Responsive image width */
+              w-full 
+              max-w-[420px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[820px]
+
+              /* Pull left slightly on larger screens */
+              sm:-ml-12 md:-ml-10 lg:-ml-40 xl:-ml-90
+            "
+          >
             <Image
               src="/howworkImg.png"
               alt="How It Works UI"
@@ -47,7 +59,7 @@ const HowItWorks = () => {
             ut labore et dolore magna aliqua. Ut enim ad minim veniam.
           </p>
 
-          {/* GET STARTED LINK */}
+          {/* GET STARTED CTA */}
           <a
             href="#"
             className="inline-flex items-center gap-2 underline text-[18px] sm:text-[20px] font-medium"
@@ -70,8 +82,6 @@ const HowItWorks = () => {
 
           {/* STEPS */}
           <div className="space-y-10">
-
-            {/* STEP TEMPLATE FUNCTION */}
             {[
               {
                 heading: "1. Write a healthcare input",
@@ -90,17 +100,14 @@ const HowItWorks = () => {
                 <h3 className="text-[24px] sm:text-[28px] md:text-[32px] font-bold">
                   {step.heading}
                 </h3>
-                <p
-                  className="mt-3 sm:mt-4 text-[14px] sm:text-[15px] md:text-[16px] italic leading-[140%] text-white/90"
-                >
+                <p className="mt-3 sm:mt-4 text-[14px] sm:text-[15px] md:text-[16px] italic leading-[140%] text-white/90">
                   {step.text}
                 </p>
               </div>
             ))}
-
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   );
